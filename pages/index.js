@@ -1,9 +1,10 @@
 import { Box } from "@chakra-ui/react";
+import Header from "../Components/Header";
 
 const IndexPage = () => {  
   return ( 
-      <Box>
-        Hllo
+      <Box as="body">
+        <Header/>        
       </Box>
    );
 }
