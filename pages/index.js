@@ -3,12 +3,19 @@ import Header from "../Components/Header";
 import { useState } from "react";
 
 const IndexPage = () => {  
-  const [Data, SetData] = useState("")
+  const [ISP, SetISP] = useState("")
   const [IP, setIP] = useState("8.8.8.8")
+  const []
+
+  function collectData(data){
+    SetISP(data.isp)
+    
+  }
+
     fetch(`https://geo.ipify.org/api/v1?apiKey=at_z6bnD7zIz7VsqGpoIW5n357PNQ9um&ipAddress=${IP}`, {
       "method": "GET"})
       .then(res => res.json())
-      .then(data => SetData(data.isp))
+      .then(data => collectData(data))
 
       
 
@@ -39,7 +46,7 @@ const IndexPage = () => {
 
                <Box as="article" width="20%" margin="auto">
                 <Text as="h5" textTransform={"uppercase"} color={"#707070"}>isp</Text>
-                 <Text as = "h2">{Data}</Text>
+                 <Text as = "h2">{ISP}</Text>
                </Box>
           </Box>
         </Box>
