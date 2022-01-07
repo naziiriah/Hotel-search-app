@@ -5,7 +5,8 @@ import { useState } from "react";
 const IndexPage = () => {  
   const [ISP, SetISP] = useState("")
   const [IP, setIP] = useState("8.8.8.8")
-  const []
+  const [location, setLocation] = useState('')
+  const [timezone, setTimezone] = useState()
 
   function collectData(data){
     SetISP(data.isp)
@@ -32,14 +33,14 @@ const IndexPage = () => {
                <Box height="80%" mt="1.5%" width=".15rem"  bgColor={"#D8D8D8"}> </Box>
                <Box as="article" width="20%" margin="auto">
                <Text as="h5" textTransform={"uppercase"} color={"#707070"}>location</Text>
-                 <Text as = "h2">{IP}</Text>
+                 <Text as = "h2">{location}</Text>
                </Box>
 
                <Box height="80%" mt="1.5%" width=".15rem" mx="2rem" bgColor={"#D8D8D8"}> </Box>
 
                <Box as="article" width="20%" margin="auto">
                <Text as="h5" textTransform={"uppercase"} color={"#707070"}>timezone</Text>
-                 <Text as = "h2">{IP}</Text>
+                 <Text as = "h2">{timezone}</Text>
                </Box>
 
                <Box height="80%" mt="1.5%" width=".15rem" mx="2rem" bgColor={"#D8D8D8"}> </Box>
